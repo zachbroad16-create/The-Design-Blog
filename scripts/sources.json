@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Core77",
+    "tags": [],
+    "feeds": ["https://www.core77.com/blog/rss.xml", "https://feeds.feedburner.com/core77/blog"]
+  },
+  {
+    "name": "Yanko Design",
+    "tags": ["products"],
+    "feeds": ["https://www.yankodesign.com/feed/"]
+  },
+  {
+    "name": "Designboom",
+    "tags": [],
+    "feeds": ["https://www.designboom.com/design/feed/", "https://www.designboom.com/feed/"]
+  },
+  {
+    "name": "Dezeen",
+    "tags": [],
+    "feeds": ["https://www.dezeen.com/design/feed/", "https://www.dezeen.com/feed/"]
+  },
+  {
+    "name": "Design Milk",
+    "tags": [],
+    "feeds": ["https://design-milk.com/category/technology/feed/", "https://design-milk.com/feed/"]
+  },
+  {
+    "name": "SolidSmack",
+    "tags": [],
+    "feeds": ["https://www.solidsmack.com/feed/"]
+  },
+  {
+    "name": "MaterialDistrict",
+    "tags": ["materials"],
+    "feeds": ["https://materialdistrict.com/feed/"]
+  },
+  {
+    "name": "Design Week",
+    "tags": [],
+    "feeds": ["https://www.designweek.co.uk/feed/"]
+  }
+]
