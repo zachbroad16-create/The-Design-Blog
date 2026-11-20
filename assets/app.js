@@ -42,7 +42,7 @@
     return new Date(iso).toLocaleDateString(undefined, { day: "numeric", month: "short" });
   }
 
-  const LABELS = { products: "Product", materials: "Material", styles: "Style", companies: "Studio" };
+  const LABELS = { automotive: "Automotive", products: "Product", materials: "Material", styles: "Style", companies: "Studio" };
 
   function el(tag, attrs = {}, children = []) {
     const node = document.createElement(tag);

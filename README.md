@@ -4,8 +4,8 @@ A live feed of industrial and product design news: new products, materials, styl
 
 ## How it works
 
-- `scripts/sources.json` lists the RSS feeds it reads (Core77, Yanko Design, Designboom, Dezeen, Design Milk, SolidSmack, MaterialDistrict, Design Week). Each source can list backup feed URLs, tried in order.
-- `scripts/fetch_feeds.py` pulls every feed, keeps each story's headline, image, short summary and link, sorts it into Products, Materials, Styles & trends and Studios & companies by keyword, and merges it into `data/articles.json`. Stories older than 45 days drop off. A feed that's down never empties the site, because older stories are kept.
+- `scripts/sources.json` lists the RSS feeds it reads: Core77, Yanko Design, Designboom (design and technology), Dezeen (design and technology), Design Milk and Car Body Design. A source's feeds are backups tried in order, unless it sets `"combine": true`, which reads them all.
+- `scripts/fetch_feeds.py` pulls every feed, keeps each story's headline, image, short summary and link, sorts it into Products, Automotive, Materials, Styles & trends and Studios & companies by keyword, and merges it into `data/articles.json`. The first time it reads a feed, it reads up to 8 pages back to fill in recent weeks. Stories older than 60 days drop off. A feed that's down never empties the site, because older stories are kept.
 - `.github/workflows/refresh.yml` runs that script every three hours (and on every push to `main`), commits new stories, and publishes the site to GitHub Pages.
 - `index.html` and `assets/` are the site itself: plain HTML, CSS and JavaScript, no build step.
 

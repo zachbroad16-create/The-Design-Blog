@@ -15,4 +15,7 @@ assert {"products", "materials"} <= set(lamp["categories"]), lamp["categories"]
 assert studio["image"] == "https://example.com/studio.jpg"
 assert "companies" in studio["categories"]
 assert f.categorise("Card games", "nothing here", []) == []
+assert "automotive" in f.categorise("Porsche Mission S concept previews a mid-engined supercar", "", [])
+assert "automotive" not in f.categorise("A carton of carbon cards", "", [])
+assert f.page_url("https://x.com/feed/", 2) == "https://x.com/feed/?paged=2"
 print("ok")
