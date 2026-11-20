@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Design Blog</title>
+  <meta name="description" content="Industrial and product design news, refreshed automatically every few hours.">
+  <meta name="referrer" content="no-referrer">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="topbar">
+      <span id="today"></span>
+      <span id="freshness" aria-live="polite">Loading…</span>
+    </div>
+    <a class="wordmark" href="./">The Design <em>Blog</em></a>
+    <p class="tagline">Industrial and product design: new objects, materials, styles and the studios behind them.</p>
+  </header>
+
+  <nav class="controls" aria-label="Sections">
+    <div class="tabs" role="tablist" id="tabs">
+      <button role="tab" data-cat="all" aria-selected="true">All</button>
+      <button role="tab" data-cat="products">Products</button>
+      <button role="tab" data-cat="materials">Materials</button>
+      <button role="tab" data-cat="styles">Styles &amp; trends</button>
+      <button role="tab" data-cat="companies">Studios &amp; companies</button>
+      <button role="tab" data-cat="saved">Saved</button>
+    </div>
+    <div class="filters">
+      <label class="visually-hidden" for="source">Source</label>
+      <select id="source"><option value="">All sources</option></select>
+      <label class="visually-hidden" for="search">Search</label>
+      <input id="search" type="search" placeholder="Search stories" autocomplete="off">
+    </div>
+  </nav>
+
+  <main>
+    <section id="lead" class="lead" aria-label="Top stories"></section>
+    <section id="grid" class="grid" aria-label="Stories"></section>
+    <p id="empty" class="empty" hidden></p>
+    <div class="more-wrap"><button id="more" class="more" hidden>Show more</button></div>
+  </main>
+
+  <footer class="footer">
+    <p>Every story links to its original publisher. Headlines, images and summaries belong to them.</p>
+    <p id="source-status"></p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

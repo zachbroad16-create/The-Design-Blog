@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel><title>Fixture</title>
+<item><title>Test lamp made from mycelium</title><link>https://example.com/lamp</link>
+<pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
+<description>&lt;p&gt;A pendant lamp grown from mycelium.&lt;/p&gt;The post Test lamp appeared first on Fixture.</description>
+<media:content url="https://example.com/lamp.jpg" medium="image"/></item>
+<item><title>Studio interview</title><link>https://example.com/studio</link>
+<pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
+<content:encoded>&lt;img src="https://example.com/studio.jpg"&gt;&lt;p&gt;We talk to a studio.&lt;/p&gt;</content:encoded></item>
+</channel></rss>
