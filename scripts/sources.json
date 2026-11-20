@@ -12,12 +12,14 @@
   {
     "name": "Designboom",
     "tags": [],
-    "feeds": ["https://www.designboom.com/design/feed/", "https://www.designboom.com/feed/"]
+    "combine": true,
+    "feeds": ["https://www.designboom.com/design/feed/", "https://www.designboom.com/technology/feed/"]
   },
   {
     "name": "Dezeen",
     "tags": [],
-    "feeds": ["https://www.dezeen.com/design/feed/", "https://www.dezeen.com/feed/"]
+    "combine": true,
+    "feeds": ["https://www.dezeen.com/design/feed/", "https://www.dezeen.com/technology/feed/"]
   },
   {
     "name": "Design Milk",
@@ -25,18 +27,8 @@
     "feeds": ["https://design-milk.com/category/technology/feed/", "https://design-milk.com/feed/"]
   },
   {
-    "name": "SolidSmack",
-    "tags": [],
-    "feeds": ["https://www.solidsmack.com/feed/"]
-  },
-  {
-    "name": "MaterialDistrict",
-    "tags": ["materials"],
-    "feeds": ["https://materialdistrict.com/feed/"]
-  },
-  {
-    "name": "Design Week",
-    "tags": [],
-    "feeds": ["https://www.designweek.co.uk/feed/"]
+    "name": "Car Body Design",
+    "tags": ["automotive"],
+    "feeds": ["https://www.carbodydesign.com/feed/"]
   }
 ]

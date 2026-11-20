@@ -20,8 +20,11 @@ ROOT = Path(__file__).resolve().parent.parent
 SOURCES_FILE = ROOT / "scripts" / "sources.json"
 OUT_FILE = ROOT / "data" / "articles.json"
 
-MAX_AGE_DAYS = 45
-MAX_ITEMS = 600
+MAX_AGE_DAYS = 60
+MAX_ITEMS = 900
+# A feed URL we haven't read before gets this many pages read, to fill in the
+# last few weeks. After that, each run only reads its first page.
+BACKFILL_PAGES = 8
 SUMMARY_WORDS = 38
 USER_AGENT = "Mozilla/5.0 (compatible; DesignBlogFeedReader/1.0)"
 
@@ -29,6 +32,18 @@ USER_AGENT = "Mozilla/5.0 (compatible; DesignBlogFeedReader/1.0)"
 # Keyword rules for the category tabs. A story can sit in several.
 # Words match whole words; a trailing * matches any ending (recycl* -> recycled).
 CATEGORIES = {
+    "automotive": [
+        "car", "cars", "concept car*", "supercar*", "hypercar*", "sports car*",
+        "race car*", "automotive", "automaker*", "carmaker*", "vehicle*", "ev", "evs",
+        "electric vehicle*", "suv", "suvs", "pickup*", "motorcycle*", "motorbike*",
+        "e-bike*", "scooter*", "livery", "f1", "formula 1", "formula one",
+        "porsche", "ferrari", "lamborghini", "bmw", "mercedes*", "audi", "volkswagen",
+        "polestar", "tesla", "rivian", "lucid motors", "hyundai", "kia", "toyota",
+        "lexus", "honda", "nissan", "mazda", "cadillac", "aston martin", "bentley",
+        "rolls-royce", "mclaren", "lotus cars", "volvo", "fiat", "alfa romeo", "renault",
+        "peugeot", "citroën", "citroen", "jaguar", "land rover", "range rover", "infiniti",
+        "ducati", "bugatti", "pagani", "koenigsegg", "maserati", "lancia", "byd",
+    ],
     "products": [
         "product*", "launch*", "lamp*", "lighting", "chair*", "stool*", "table*",
         "sofa*", "furniture", "speaker*", "headphone*", "earbud*", "watch*",
@@ -130,20 +145,73 @@ def categorise(title: str, summary: str, source_tags: list[str]) -> list[str]:
     return found
 
 
-def fetch_source(source: dict) -> tuple[list[dict], str | None]:
-    """Try each URL for a source in order; return items and the URL that worked."""
+def read_feed(url: str):
+    try:
+        parsed = feedparser.parse(url, agent=USER_AGENT)
+    except Exception as exc:  # network errors, bad XML
+        print(f"  ! {url}: {exc}", file=sys.stderr)
+        return None
+    if not parsed.entries:
+        status = getattr(parsed, "status", "?")
+        print(f"  ! {url}: no entries (HTTP {status})", file=sys.stderr)
+        return None
+    return parsed
+
+
+def page_url(url: str, page: int) -> str:
+    """WordPress feeds serve older posts at ?paged=N."""
+    return f"{url}{'&' if '?' in url else '?'}paged={page}"
+
+
+def fetch_feed(url: str, source: dict, backfilled: set[str]) -> list[dict]:
+    pages = 1 if url in backfilled else BACKFILL_PAGES
+    if pages > 1:
+        print(f"  backfilling {url} (up to {pages} pages)")
+    parsed = read_feed(url)
+    if parsed is None:
+        return []
+    items = to_items(parsed.entries, source)
+    seen = {i["id"] for i in items}
+    for page in range(2, pages + 1):
+        older = read_feed(page_url(url, page))
+        if older is None:
+            break
+        new = [i for i in to_items(older.entries, source) if i["id"] not in seen]
+        if not new:  # feed ignores ?paged, or we've run out
+            break
+        items += new
+        seen.update(i["id"] for i in new)
+    backfilled.add(url)
+    return items
+
+
+def fetch_source(source: dict, backfilled: set[str] | None = None) -> tuple[list[dict], str | None]:
+    """Return a source's stories and which feed(s) answered.
+
+    By default the feeds list is fallbacks, tried in order until one works.
+    With "combine": true, every feed in the list is read and merged
+    (for example a site's design and technology sections).
+    """
+    if backfilled is None:
+        backfilled = set()
+    if source.get("combine"):
+        items, used = [], []
+        for url in source["feeds"]:
+            got = fetch_feed(url, source, backfilled)
+            if got:
+                items += got
+                used.append(url)
+        return items, ", ".join(used) or None
     for url in source["feeds"]:
-        try:
-            parsed = feedparser.parse(url, agent=USER_AGENT)
-        except Exception as exc:  # network errors, bad XML
-            print(f"  ! {url}: {exc}", file=sys.stderr)
-            continue
-        if not parsed.entries:
-            status = getattr(parsed, "status", "?")
-            print(f"  ! {url}: no entries (HTTP {status})", file=sys.stderr)
-            continue
+        items = fetch_feed(url, source, backfilled)
+        if items:
+            return items, url
+    return [], None
+
+
+def to_items(entries, source: dict) -> list[dict]:
         items = []
-        for entry in parsed.entries:
+        for entry in entries:
             link = entry.get("link")
             title = clean_text(entry.get("title", ""))
             if not link or not title:
@@ -162,24 +230,32 @@ def fetch_source(source: dict) -> tuple[list[dict], str | None]:
                 "published": published(entry),
                 "categories": categorise(title, summary, source.get("tags", [])),
             })
-        return items, url
-    return [], None
+        return items
 
 
 def main() -> int:
     sources = json.loads(SOURCES_FILE.read_text())
     existing = {}
+    backfilled: set[str] = set()
     if OUT_FILE.exists():
         try:
-            for item in json.loads(OUT_FILE.read_text()).get("articles", []):
+            previous = json.loads(OUT_FILE.read_text())
+            backfilled = set(previous.get("backfilled", []))
+            for item in previous.get("articles", []):
                 existing[item["id"]] = item
         except (json.JSONDecodeError, KeyError):
             print("! existing articles.json unreadable, starting fresh", file=sys.stderr)
 
+    tags_by_source = {s["name"]: s.get("tags", []) for s in sources}
+    # Re-tag stored stories so new keyword rules apply to them too.
+    for item in existing.values():
+        item["categories"] = categorise(
+            item["title"], item.get("summary", ""), tags_by_source.get(item["source"], []))
+
     status = []
     for source in sources:
         print(f"- {source['name']}")
-        items, used = fetch_source(source)
+        items, used = fetch_source(source, backfilled)
         status.append({"name": source["name"], "ok": bool(items), "count": len(items)})
         for item in items:
             existing[item["id"]] = item  # newer copy wins
@@ -196,6 +272,7 @@ def main() -> int:
     OUT_FILE.write_text(json.dumps({
         "updated": datetime.now(timezone.utc).isoformat(),
         "sources": status,
+        "backfilled": sorted(backfilled),
         "articles": articles,
     }, indent=1, ensure_ascii=False) + "\n")
 
