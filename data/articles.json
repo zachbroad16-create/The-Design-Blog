@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T17:50:12.098331+00:00",
+ "updated": "2026-11-20T17:54:36.635909+00:00",
  "sources": [
   {
    "name": "Core77",
@@ -9,22 +9,22 @@
   {
    "name": "Yanko Design",
    "ok": true,
-   "count": 128
+   "count": 16
   },
   {
    "name": "Designboom",
    "ok": true,
-   "count": 160
+   "count": 20
   },
   {
    "name": "Dezeen",
    "ok": true,
-   "count": 800
+   "count": 100
   },
   {
    "name": "Design Milk",
    "ok": true,
-   "count": 96
+   "count": 12
   },
   {
    "name": "Car Body Design",
