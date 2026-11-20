@@ -13,8 +13,8 @@ Every card links to the original article. The site never republishes full articl
 
 ## One-time setup
 
-1. Merge this into `main`.
-2. In the repo, go to **Settings → Pages** and set **Source** to **GitHub Actions**.
+1. In the repo, go to **Settings → Pages** and set **Source** to **GitHub Actions**. Do this before merging, or the first publish run fails.
+2. Merge this into `main`.
 3. Go to **Actions → Refresh and deploy → Run workflow** to do the first refresh now instead of waiting up to three hours.
 
 The site then lives at `https://<your-username>.github.io/<repo-name>/`.
