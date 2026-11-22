@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T07:26:51.377232+00:00",
+ "updated": "2026-11-22T09:59:01.581476+00:00",
  "sources": [
   {
    "name": "Core77",
@@ -42,6 +42,20 @@
   "https://www.yankodesign.com/feed/"
  ],
  "articles": [
+  {
+   "id": "https://www.designboom.com/technology/mono-material-3d-printed-childrens-shoe-five-sizes-foot-shape-fits-daniel-winter/",
+   "title": "mono-material 3D printed children’s shoe expands five sizes and adapts to foot shape",
+   "link": "https://www.designboom.com/technology/mono-material-3d-printed-childrens-shoe-five-sizes-foot-shape-fits-daniel-winter/",
+   "summary": "designer daniel winter develops fits, a 3D printed shoe fabricated from 75A flexible filament whose articulating perimeter segments expand across five children’s sizes and adapt to adult foot shapes across a three-size range.",
+   "image": "https://www.designboom.com/wp-content/uploads/2026/11/mono-material-3d-printed-childrens-shoe-five-sizes-foot-shape-fits-designboom-700-500x400-22b08q85r242.jpg",
+   "source": "Designboom",
+   "published": "2026-11-22T08:15:46+00:00",
+   "categories": [
+    "products",
+    "materials",
+    "companies"
+   ]
+  },
   {
    "id": "https://www.dezeen.com/2026/11/22/jony-ive-margaret-calvert-posters-decade-london-design-museum-kensington/",
    "title": "Jony Ive and Margaret Calvert create posters to celebrate decade of Design Museum in Kensington",
@@ -260,7 +274,7 @@
    "title": "mercedes-benz built this orange, gullwing-doored supercar as an experiment in 1970",
    "link": "https://www.designboom.com/technology/mercedes-benz-orange-gullwing-supercar-1970-c-111-ii-rm-sothebys/",
    "summary": "the 1970 prototype shows a wankel engine, orange fiberglass body and houndstooth interior as it heads to auction with RM sotheby's.",
-   "image": "https://www.designboom.com/wp-content/uploads/2026/11/1970-mercedes-benz-C-111-II-RM-sothebys-designboom-700-500x400-22b08q85r675.jpg",
+   "image": "https://www.designboom.com/wp-content/uploads/2026/11/1970-mercedes-benz-C-111-II-RM-sothebys-designboom-700-500x400-22b08q85r210.jpg",
    "source": "Designboom",
    "published": "2026-11-20T18:45:24+00:00",
    "categories": [
@@ -5612,21 +5626,6 @@
    "categories": [
     "products",
     "materials"
-   ]
-  },
-  {
-   "id": "https://www.dezeen.com/2026/09/23/kadewe-yont-studio-namilia-passenger-kadewe/",
-   "title": "Brutalist cassette listening booth in Berlin's KaDeWe unlocks \"music you can't find on Spotify\"",
-   "link": "https://www.dezeen.com/2026/09/23/kadewe-yont-studio-namilia-passenger-kadewe/",
-   "summary": "Design firm Yont Studio has used salvaged car seats and more than 140 cassette tapes to create an analogue sound installation inside Berlin department store KaDeWe. Created in collaboration with Telekom Electronic Beats and local fashion brand Namilia…",
-   "image": "https://static-2026.dezeen.com/uploads/2026/09/hero-yont-studio-passenger-namilia_dezeen_2364_col_0-411x411.jpg",
-   "source": "Dezeen",
-   "published": "2026-09-23T09:00:01+00:00",
-   "categories": [
-    "automotive",
-    "products",
-    "styles",
-    "companies"
    ]
   }
  ]
