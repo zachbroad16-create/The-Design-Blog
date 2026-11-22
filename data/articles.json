@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T13:11:44.917918+00:00",
+ "updated": "2026-11-22T15:57:12.953402+00:00",
  "sources": [
   {
    "name": "Core77",
@@ -42,6 +42,32 @@
   "https://www.yankodesign.com/feed/"
  ],
  "articles": [
+  {
+   "id": "https://www.designboom.com/design/iris-van-herpen-learning-collaborate-nature-interview/",
+   "title": "‘we are tiny ecosystems’: iris van herpen on learning to collaborate with nature",
+   "link": "https://www.designboom.com/design/iris-van-herpen-learning-collaborate-nature-interview/",
+   "summary": "exploring the hidden intelligence of natural systems, the dutch designer reflects on living materials, experimentation, and the future of design ahead of her upcoming sculptural commission with maison perrier-jouët at design miami.",
+   "image": "https://www.designboom.com/wp-content/uploads/2026/11/iris-van-herpen-learning-collaborate-nature-interview-designboom-700-500x400-22b08q85r137.jpg",
+   "source": "Designboom",
+   "published": "2026-11-22T15:15:26+00:00",
+   "categories": [
+    "materials",
+    "styles",
+    "companies"
+   ]
+  },
+  {
+   "id": "https://www.yankodesign.com/2026/11/22/a-treetop-view-without-the-fishbowl-john-lautners-baldwin-house/?utm_source=rss&utm_medium=rss&utm_campaign=a-treetop-view-without-the-fishbowl-john-lautners-baldwin-house",
+   "title": "A Treetop View Without the Fishbowl: John Lautner’s Baldwin House",
+   "link": "https://www.yankodesign.com/2026/11/22/a-treetop-view-without-the-fishbowl-john-lautners-baldwin-house/?utm_source=rss&utm_medium=rss&utm_campaign=a-treetop-view-without-the-fishbowl-john-lautners-baldwin-house",
+   "summary": "A Treetop View Without the Fishbowl: John Lautner’s Baldwin House From Micheltorena Street, the Baldwin Residence looks like a low roof behind a hedge, with a ribbon of windows tucked under the eaves. From downhill,...",
+   "image": "https://www.yankodesign.com/images/design_news/2026/11/a-treetop-view-without-the-fishbowl-john-lautners-baldwin-house/baldwin-01.jpg",
+   "source": "Yanko Design",
+   "published": "2026-11-22T14:20:09+00:00",
+   "categories": [
+    "products"
+   ]
+  },
   {
    "id": "https://www.yankodesign.com/2026/11/22/the-8-best-desk-accessories-that-make-your-workspace-feel-like-you-not-your-job/?utm_source=rss&utm_medium=rss&utm_campaign=the-8-best-desk-accessories-that-make-your-workspace-feel-like-you-not-your-job",
    "title": "The 8 Best Desk Accessories That Make Your Workspace Feel Like You, Not Your Job",
@@ -5659,19 +5685,6 @@
    "source": "Dezeen",
    "published": "2026-09-23T17:00:46+00:00",
    "categories": []
-  },
-  {
-   "id": "https://www.designboom.com/technology/lume-travelers-lightest-caravan-pull-out-kitchen-aluminum-shell-ranger/",
-   "title": "lume traveler’s lightest caravan hides a pull-out kitchen in its aluminum shell",
-   "link": "https://www.designboom.com/technology/lume-travelers-lightest-caravan-pull-out-kitchen-aluminum-shell-ranger/",
-   "summary": "the compact aluminum trailer moves cooking outdoors to leave more of its interior free for sleeping and sitting.",
-   "image": "https://www.designboom.com/wp-content/uploads/2026/09/lume-ranger-lightweight-caravan-designboom-700-500x400-22b08q85r958.jpg",
-   "source": "Designboom",
-   "published": "2026-09-23T15:45:12+00:00",
-   "categories": [
-    "products",
-    "materials"
-   ]
   }
  ]
 }
