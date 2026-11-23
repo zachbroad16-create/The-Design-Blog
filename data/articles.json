@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T04:24:33.901684+00:00",
+ "updated": "2026-11-23T07:52:28.207279+00:00",
  "sources": [
   {
    "name": "Core77",
@@ -43,6 +43,19 @@
  ],
  "articles": [
   {
+   "id": "https://www.dezeen.com/2026/11/23/archaeology-design-ex-situ-exhibition/",
+   "title": "\"Sacred\" archaeological finds become raw materials for design in Ex Situ exhibition",
+   "link": "https://www.dezeen.com/2026/11/23/archaeology-design-ex-situ-exhibition/",
+   "summary": "New objects made from mammoth bone, leather from the middle ages and stumps from a road built under Roman Emperor Hadrian feature in the Ex Situ project, set to be exhibited soon in The Hague.",
+   "image": "https://static-2026.dezeen.com/uploads/2026/11/ex-situ-matter-in-translation-exhibition-design_dezeen_2364_sq2-1024x1024.jpg",
+   "source": "Dezeen",
+   "published": "2026-11-23T06:00:00+00:00",
+   "categories": [
+    "materials",
+    "styles"
+   ]
+  },
+  {
    "id": "https://www.yankodesign.com/2026/11/22/tank-5-pro-puts-thermal-imaging-and-a-2k-projector-in-a-rugged-phone/?utm_source=rss&utm_medium=rss&utm_campaign=tank-5-pro-puts-thermal-imaging-and-a-2k-projector-in-a-rugged-phone",
    "title": "TANK 5 Pro Puts Thermal Imaging and a 2K Projector in a Rugged Phone",
    "link": "https://www.yankodesign.com/2026/11/22/tank-5-pro-puts-thermal-imaging-and-a-2k-projector-in-a-rugged-phone/?utm_source=rss&utm_medium=rss&utm_campaign=tank-5-pro-puts-thermal-imaging-and-a-2k-projector-in-a-rugged-phone",
@@ -85,7 +98,7 @@
    "title": "This Magnetic Pen Clips to Your Notebook So You Don’t Have to Dig for It",
    "link": "https://www.yankodesign.com/2026/11/22/this-magnetic-pen-clips-to-your-notebook-so-you-dont-have-to-dig-for-it/?utm_source=rss&utm_medium=rss&utm_campaign=this-magnetic-pen-clips-to-your-notebook-so-you-dont-have-to-dig-for-it",
    "summary": "This Magnetic Pen Clips to Your Notebook So You Don’t Have to Dig for It You’ve bought your partner a holiday gift. You’ve found the wrapping paper. Now you need a pen for the tag, so naturally, you…",
-   "image": "https://www.yankodesign.com/images/design_news/2026/11/a-20-magnetic-pen-thats-actually-a-thoughtful-stocking-stuffer/inseparable-pen-08.jpg",
+   "image": "https://www.yankodesign.com/images/design_news/2026/11/a-20-magnetic-pen-thats-actually-a-thoughtful-stocking-stuffer/inseparable-pen-05.jpg",
    "source": "Yanko Design",
    "published": "2026-11-22T21:45:13+00:00",
    "categories": [
@@ -5735,19 +5748,6 @@
    "source": "Dezeen",
    "published": "2026-09-24T08:00:41+00:00",
    "categories": [
-    "materials"
-   ]
-  },
-  {
-   "id": "https://www.dezeen.com/2026/09/24/furniture-products-london-design-festival-material-offcuts/",
-   "title": "Seven savvy pieces from London Design Festival made of material offcuts",
-   "link": "https://www.dezeen.com/2026/09/24/furniture-products-london-design-festival-material-offcuts/",
-   "summary": "On the heels of London Design Festival, we have rounded up a selection of furniture and products presented during the city-wide event made of scraps that would otherwise have gone to waste. London Design Festival (LDF) concluded on…",
-   "image": "https://static-2026.dezeen.com/uploads/2026/09/dagwood-bench-1-411x411.jpg",
-   "source": "Dezeen",
-   "published": "2026-09-24T05:00:01+00:00",
-   "categories": [
-    "products",
     "materials"
    ]
   }
