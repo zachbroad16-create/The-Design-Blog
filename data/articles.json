@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T04:23:52.706928+00:00",
+ "updated": "2026-11-25T07:40:39.141152+00:00",
  "sources": [
   {
    "name": "Core77",
@@ -42,6 +42,19 @@
   "https://www.yankodesign.com/feed/"
  ],
  "articles": [
+  {
+   "id": "https://www.dezeen.com/2026/11/25/assemble-building-blue-skac/",
+   "title": "Assemble covers miniature agricultural buildings in intense blue pigment for Building Blue exhibition in Tokyo",
+   "link": "https://www.dezeen.com/2026/11/25/assemble-building-blue-skac/",
+   "summary": "Architecture collective Assemble has created small, climbable cedar buildings that \"play with scale\" to showcase a new pigment made from industrial waste at Tokyo's SKAC gallery.",
+   "image": "https://static-2026.dezeen.com/uploads/2026/11/assemble-building-blue-skwat-tokyo_dezeen_2364_col_sq2-1024x1024.jpg",
+   "source": "Dezeen",
+   "published": "2026-11-25T06:00:00+00:00",
+   "categories": [
+    "materials",
+    "styles"
+   ]
+  },
   {
    "id": "https://www.yankodesign.com/2026/11/24/hisense-u6sf-pro-brings-miniled-picture-and-built-in-bass-to-movie-night/?utm_source=rss&utm_medium=rss&utm_campaign=hisense-u6sf-pro-brings-miniled-picture-and-built-in-bass-to-movie-night",
    "title": "Hisense U6SF Pro Brings MiniLED Picture and Built-In Bass to Movie Night",
@@ -6220,18 +6233,6 @@
    "categories": [
     "products",
     "styles",
-    "companies"
-   ]
-  },
-  {
-   "id": "https://www.dezeen.com/2026/09/26/dezeen-awards-shortlists-this-week/",
-   "title": "This week we revealed the Dezeen Awards shortlists",
-   "link": "https://www.dezeen.com/2026/09/26/dezeen-awards-shortlists-this-week/",
-   "summary": "This week on Dezeen, we revealed the architecture, interiors and design projects in the running to win this year's Dezeen Awards. Over the week, we announced all the projects shortlisted for this year's awards, starting with the 152…",
-   "image": "https://static-2026.dezeen.com/uploads/2026/09/dezeen-awards-2026-architecture-shortlist_dezeen_2364_col_8-411x411.jpg",
-   "source": "Dezeen",
-   "published": "2026-09-26T05:00:18+00:00",
-   "categories": [
     "companies"
    ]
   }
