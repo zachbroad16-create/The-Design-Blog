@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T04:19:52.771392+00:00",
+ "updated": "2026-11-26T07:39:50.268198+00:00",
  "sources": [
   {
    "name": "Core77",
@@ -42,6 +42,20 @@
   "https://www.yankodesign.com/feed/"
  ],
  "articles": [
+  {
+   "id": "https://www.dezeen.com/2026/11/26/jabez-bartlett-channels-brutalist-folk-spirit-for-debut-furniture-collection/",
+   "title": "Jabez Bartlett channels “brutalist-folk” spirit for debut furniture collection",
+   "link": "https://www.dezeen.com/2026/11/26/jabez-bartlett-channels-brutalist-folk-spirit-for-debut-furniture-collection/",
+   "summary": "The London maker of Milan design week's much-discussed inflatable coffee table has unveiled his debut furniture collection, which includes veiny wax chairs and a rug adorned with cattle tags. Jabez Bartlett is a British production-turned-furniture designer who caused…",
+   "image": "https://static-2026.dezeen.com/uploads/2026/11/jabez-bartlett-debut-furniture-exhibition-hackney-london_dezeen_2364_col_0-1024x1024.jpg",
+   "source": "Dezeen",
+   "published": "2026-11-26T06:00:00+00:00",
+   "categories": [
+    "products",
+    "styles",
+    "companies"
+   ]
+  },
   {
    "id": "https://www.designboom.com/design/older-travelers-moove-on-luggage-discreet-mobility-aid-lorenzo-rimini/",
    "title": "developed with travelers aged 75+, moove on reimagines luggage as discreet mobility aid",
@@ -6522,18 +6536,6 @@
    "published": "2026-09-27T20:35:04+00:00",
    "categories": [
     "products"
-   ]
-  },
-  {
-   "id": "https://www.dezeen.com/2026/09/27/waste-wool-cladding-harvard-university-oslo-architecture-triennale/",
-   "title": "Harvard University transforms waste wool into cladding for retrofits",
-   "link": "https://www.dezeen.com/2026/09/27/waste-wool-cladding-harvard-university-oslo-architecture-triennale/",
-   "summary": "Grinham Research Group at Harvard University has developed an insulating cladding tile made from waste wool, which was presented at this year's Oslo Architecture Triennale. In an installation named Upcycling Wool Ecologies, Grinham Research Group showcased its tiles…",
-   "image": "https://static-2026.dezeen.com/uploads/2026/09/wool-tiles-oslo-architecture-triennale_dezeen_2364_col_1-411x411.jpg",
-   "source": "Dezeen",
-   "published": "2026-09-27T05:00:23+00:00",
-   "categories": [
-    "materials"
    ]
   }
  ]
